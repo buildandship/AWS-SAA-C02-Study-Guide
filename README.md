@@ -92,46 +92,94 @@ If at any point you find yourself feeling uncertain of your progress and in need
 ### Exam Content Breakdown:
 ![Screen Shot 2020-06-05 at 2 49 08 PM](https://user-images.githubusercontent.com/13093517/83912374-c2b87900-a73b-11ea-9691-b38383b43ff9.png)
 
-*Domain 1: Design Resilient Architectures*
 
-  1.1 - Design a multi-tier architecture solution
+    1. Domain 1: Design Resilient Architectures
+      1.1 Design a multi-tier architecture solution
+        
+         1. Determine a solution design based on access patterns.
+         2. Determine a scaling strategy for components used in a design.
+         3. Select an appropriate database based on requirements.
+         4. Select an appropriate compute and storage service based on requirements.
+      
+      1.2 Design highly available and/or fault-tolerant architectures
+        
+        1. Determine the amount of resources needed to provide a fault-tolerant architecture across Availability Zones.
+        2. Select a highly available configuration to mitigate single points of failure.
+        3. Apply AWS services to improve the reliability of legacy applications when application changes are not possible.
+        4. Select an appropriate disaster recovery strategy to meet business requirements.
+        5. Identify key performance indicators to ensure the high availability of the solution.
+    
+      1.3 Design decoupling mechanisms using AWS services
 
-  1.2 - Design highly available and/or fault-tolerant architectures
+        1. Determine which AWS services can be leveraged to achieve loose coupling of components.
+        2. Determine when to leverage serverless technologies to enable decoupling.
+     
+     1.4 Choose appropriate resilient storage
+        1. Define a strategy to ensure the durability of data.
+        2. Identify how data service consistency will affect the operation of the application.
+        3. Select data services that will meet the access requirements of the application.
+        4. Identify storage services that can be used with hybrid or non-cloud-native applications.
+   
+   
+    2. Domain 2: Design High-Performing Architectures
+      2.1 Identify elastic and scalable **compute** solutions for a workload
+        1. Select the appropriate instance(s) based on compute, storage, and networking requirements.
+        2. Choose the appropriate architecture and services that scale to meet performance requirements.
+        3. Identify metrics to monitor the performance of the solution.
+   
+      2.2 Select high-performing and scalable **storage** solutions for a workload
+        1. Select a storage service and configuration that meets performance demands.
+        2. Determine storage services that can scale to accommodate future needs.
+   
+      2.3 Select high-performing **networking** solutions for a workload
+        1. Select appropriate AWS connectivity options to meet performance demands.
+        2. Select appropriate features to optimize connectivity to AWS public services.
+        3. Determine an edge caching strategy to provide performance benefits.
+        4. Select appropriate data transfer service for migration and/or ingestion.
+   
+      2.4 Choose high-performing **database** solutions for a workload
+        1. Select an appropriate database scaling strategy.
+        2. Determine when database caching is required for performance improvement.
+        3. Choose a suitable database service to meet performance needs.
+   
 
-  1.3 - Design decoupling mechanisms using AWS services
+    3. Domain 3: Design Secure Applications and Architectures
+      3.1 Design secure access to AWS resources
+        1. Determine when to choose between users, groups, and roles.
+        2. Interpret the net effect of a given access policy.
+        3. Select appropriate techniques to secure a root account.
+        4. Determine ways to secure credentials using features of AWS IAM.
+        5. Determine the secure method for an application to access AWS APIs.
+        6. Select appropriate services to create traceability for access to AWS resources.
+   
+      3.2 Design secure application tiers
+        1. Given traffic control requirements, determine when and how to use security groups and network ACLs.
+        2. Determine a network segmentation strategy using public and private subnets.
+        3. Select the appropriate routing mechanism to securely access AWS service endpoints or internet-based resources from Amazon VPC.
+        4. Select appropriate AWS services to protect applications from external threats.
+   
+     3.3 Select appropriate data security options
+        1. Determine the policies that need to be applied to objects based on access patterns.
+        2. Select appropriate encryption options for data at rest and in transit for AWS services.
+        3. Select appropriate key management options based on requirements.
+   
 
-  1.4 - Choose appropriate resilient storage
-
-
-*Domain 2: Design High-Performing Architectures*
-
-  2.1 - Identify elastic and scalable **compute** solutions for a workload
-
-  2.2 - Select high-performing and scalable **storage** solutions for a workload
-
-  2.3 - Select high-performing **networking** solutions for a workload
-
-  2.4 - Choose high-performing **database** solutions for a workload
-
-
-*Domain 3: Design Secure Applications and Architectures*
-
-  3.1 - Design secure access to AWS resources
-
-  3.2 - Design secure application tiers
-
-  3.3 - Select appropriate data security options
-
-
-*Domain 4: Design Cost-Optimized Architectures*
-
-  4.1 - Identify cost-effective **storage** solutions
-
-  4.2 - Identify cost-effective **compute** and **database** services
-
-  4.3 - Design cost-optimized **network** architectures
-
-
+    4. Domain 4: Design Cost-Optimized Architectures
+     4.1 Identify cost-effective **storage** solutions
+      1. Determine the most cost-effective data storage options based on requirements.
+      2. Apply automated processes to ensure that data over time is stored on storage tiers that minimize costs.
+     
+     4.2 Identify cost-effective **compute** and **database** services
+      1. Determine the most cost-effective Amazon EC2 billing options for each aspect of the workload.
+      2. Determine the most cost-effective database options based on requirements.
+      3. Select appropriate scaling strategies from a cost perspective.
+      4. Select and size compute resources that are optimally suited for the workload.
+      5. Determine options to minimize total cost of ownership (TCO) through managed services and serverless architectures.
+   
+     4.3 Design cost-optimized **network** architectures
+      1. Identify when content delivery can be used to reduce costs.
+      2. Determine strategies to reduce data transfer costs within AWS.
+      3. Determine the most cost-effective connectivity options between AWS and on-premises environments.
 
 ### Recommended Reading:
 
@@ -171,7 +219,7 @@ You can cover a lot of ground by skimming over what you already know or what you
 
 ### IAM Simplified:
 
-IAM offers a centralized hub of control within AWS and integrates with all other AWS Services. IAM comes with the ability to share access at various levels of permission and it supports the ability to use identity federation (the process of delegating authentication to a trusted external party like Facebook or Google) for temporary or limited access. IAM comes with MFA support and allows you to set up custom password rotation policy across your entire organization. 
+IAM offers a centralized hub of control within AWS and integrates with all other AWS Services. IAM comes with the ability to share access at various levels of permission, and it supports the ability to use identity federation (the process of delegating authentication to a trusted external party like Facebook or Google) for temporary or limited access. IAM comes with MFA support and allows you to set up custom password rotation policy across your entire organization. 
 It is also PCI DSS compliant i.e. payment card industry data security standard. (passes government mandated credit card security regulations).
 
 ### IAM Entities:
@@ -511,14 +559,14 @@ EC2 spins up resizable server instances that can scale up and down quickly. An i
 ### EC2 Instance Lifecycle:
 The following table highlights the many instance states that a VM can be in at a given time. 
 
-| Instance state | Description | Billing |
-| ------------- | ------------- |--------------|
-| `pending` | The instance is preparing to enter the `running` state. An instance enters the pending state when it launches for the first time, or when it is started after being in the `stopped` state.   | Not billed
-| `running`  | The instance is running and ready for use.  | Billed |
-| `stopping`  | The instance is preparing to be stopped or stop-hibernated.  | Not billed if preparing to stop. Billed if preparing to hibernate |
-| `stopped` | The instance is shut down and cannot be used. The instance can be started at any time. | Not billed |
-| `shutting-down`  | The instance is preparing to be terminated.  | Not billed |
-| `terminated`  | The instance has been permanently deleted and cannot be started.  | Not billed |
+| Instance state  | Description                                                                                                                                                                                 | Billing                                                           |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `pending`       | The instance is preparing to enter the `running` state. An instance enters the pending state when it launches for the first time, or when it is started after being in the `stopped` state. | Not billed                                                        |
+| `running`       | The instance is running and ready for use.                                                                                                                                                  | Billed                                                            |
+| `stopping`      | The instance is preparing to be stopped or stop-hibernated.                                                                                                                                 | Not billed if preparing to stop. Billed if preparing to hibernate |
+| `stopped`       | The instance is shut down and cannot be used. The instance can be started at any time.                                                                                                      | Not billed                                                        |
+| `shutting-down` | The instance is preparing to be terminated.                                                                                                                                                 | Not billed                                                        |
+| `terminated`    | The instance has been permanently deleted and cannot be started.                                                                                                                            | Not billed                                                        |
 
 **Note**: Reserved Instances that are terminated are billed until the end of their term.  
  
@@ -1234,13 +1282,13 @@ VPC lets you provision a logically isolated section of the AWS cloud where you c
 - Network Access Control Lists (or NACLs) are like security groups but for subnets rather than instances. The main difference between security groups and NACLs is that security groups are *stateful*, meaning you can perform both allow and deny rules that may be divergent, depending if traffic is inbound or outbound, for that rule. 
 - The following table highlights the differences between NACLs and Subnets. 
 
-| NACL | Security Group |
-| ------------- | ------------- |
-| Operates at the subnet level | Operates at the instance level | 
-| Supports allow rules and deny rules  | Supports allow rules only |
-| Is stateless: Return traffic must be explicitly allowed by rules  |  Is stateful: Return traffic is automatically allowed, regardless of any rules |
-| We process rules in order, starting with the lowest numbered rule, when deciding whether to allow traffic  |  We evaluate all rules before deciding whether to allow traffic |
-| Automatically applies to all instances in the subnets that it's associated with (therefore, it provides an additional layer of defense if the security group rules are too permissive) |  Applies to an instance only if someone specifies the security group when launching the instance, or associates the security group with the instance later on |
+| NACL                                                                                                                                                                                   | Security Group                                                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Operates at the subnet level                                                                                                                                                           | Operates at the instance level                                                                                                                               |
+| Supports allow rules and deny rules                                                                                                                                                    | Supports allow rules only                                                                                                                                    |
+| Is stateless: Return traffic must be explicitly allowed by rules                                                                                                                       | Is stateful: Return traffic is automatically allowed, regardless of any rules                                                                                |
+| We process rules in order, starting with the lowest numbered rule, when deciding whether to allow traffic                                                                              | We evaluate all rules before deciding whether to allow traffic                                                                                               |
+| Automatically applies to all instances in the subnets that it's associated with (therefore, it provides an additional layer of defense if the security group rules are too permissive) | Applies to an instance only if someone specifies the security group when launching the instance, or associates the security group with the instance later on |
 - Because NACLs are stateless, you must also ensure that outbound rules exist alongside the inbound rules so that ingress and egress can flow smoothly.
 - The default NACL that comes with a new VPC has a default rule to allow all inbounds and outbounds. This means that it exists, but doesn't do anything as all traffic passes through it freely.
 - However, when you create a new NACL (instead of using the default that comes with the VPC) the default rules will deny all inbounds and outbounds. 
