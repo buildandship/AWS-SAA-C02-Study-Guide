@@ -8,3 +8,5 @@
 
 - [How I Prepared for the AWS Solutions Architect Associate (SAA-C02) Certification Exam
 ](https://aws.plainenglish.io/how-i-prepared-for-aws-solutions-architect-associate-saa-c02-certification-3fffcbc9ccc5)
+
+- [AWS Tutorials Dojo](https://tutorialsdojo.com/aws-certified-solutions-architect-associate-saa-c03/)
